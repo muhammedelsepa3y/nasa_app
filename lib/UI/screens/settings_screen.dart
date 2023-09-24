@@ -57,30 +57,6 @@ class SettingsScreen extends StatelessWidget {
               },
             ),
           ),
-          // ValueListenableBuilder(
-          //   valueListenable: Hive.box(settingsBox).listenable(),
-          //   builder: (context, box, _) {
-          //     String language = settings.get(languageValue, defaultValue: "en");
-          //     return Switch(
-          //       value: language == "en",
-          //       onChanged: (val) =>
-          //           settings.put(languageValue, val ? "en" : "ar"),
-          //     );
-          //   },
-          // ),
-          // ValueListenableBuilder(
-          //   valueListenable: Hive.box(settingsBox).listenable(),
-          //   builder: (context, box, _) {
-          //     bool darkMode = settings.get(darkModeValue, defaultValue: false);
-          //     return Switch(
-          //       value: darkMode,
-          //       onChanged: (val) {
-          //         settings.put(darkModeValue, !darkMode);
-          //       },
-          //     );
-          //   },
-          // ),
-
         ],
       ),
     );
