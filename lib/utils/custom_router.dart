@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:nasa_app/UI/screens/news_screen.dart';
 import 'package:nasa_app/utils/route_constants.dart';
 
 import '../UI/screens/home.dart';
@@ -18,6 +19,11 @@ class AppRouter {
         path: settingsRoute,
         builder: (context, state) => const SettingsScreen(),
       ),
+      GoRoute(
+        path: news,
+        builder: (context, state) => const NewsScreen(),
+      ),
     ],
+    errorBuilder: (context, state) => const Home(),
   );
 }

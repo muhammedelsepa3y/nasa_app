@@ -5,6 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:nasa_app/utils/color_schemes.g.dart';
 import 'package:nasa_app/utils/constants.dart';
 import 'package:nasa_app/utils/custom_router.dart';
+import 'package:sizer/sizer.dart';
 
 
 import 'utils/typography.dart';
@@ -28,24 +29,28 @@ class MyApp extends StatelessWidget {
       builder: (context, box, _) {
         bool darkMode = box.get(darkModeValue, defaultValue: false);
         String language = box.get(languageValue, defaultValue: "en");
-        return MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          title: 'Nasa App',
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale(language),
-          themeMode: darkMode ? ThemeMode.dark : ThemeMode.light,
-          theme: ThemeData(
-            colorScheme: lightColorScheme,
-            textTheme: textTheme,
-            useMaterial3: true,
-          ),
-          darkTheme: ThemeData(
-            colorScheme: darkColorScheme,
-            textTheme: textTheme,
-            useMaterial3: true,
-          ),
-          routerConfig: appRouter.router,
+        return Sizer(
+          builder:(context, orientation, deviceType){
+            return MaterialApp.router(
+              debugShowCheckedModeBanner: false,
+              title: 'Nasa App',
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
+              supportedLocales: AppLocalizations.supportedLocales,
+              locale: Locale(language),
+              themeMode: darkMode ? ThemeMode.dark : ThemeMode.light,
+              theme: ThemeData(
+                colorScheme: lightColorScheme,
+                textTheme: textTheme,
+                useMaterial3: true,
+              ),
+              darkTheme: ThemeData(
+                colorScheme: darkColorScheme,
+                textTheme: textTheme,
+                useMaterial3: true,
+              ),
+              routerConfig: appRouter.router,
+            );
+          }
         );
       },
     );

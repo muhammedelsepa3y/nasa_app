@@ -18,8 +18,14 @@ class Home extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+              child: Text(locale.appHeader, style: textTheme.displayLarge,),
+            ),
             ListTile(
-              title: Text(locale.settings,style: textTheme.bodyLarge,),
+              title: Text(locale.settings,style: textTheme.displayMedium,),
               onTap: () => context.push(settingsRoute),
             )
           ],
