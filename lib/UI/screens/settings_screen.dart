@@ -18,7 +18,7 @@ class SettingsScreen extends StatelessWidget {
       body: Column(
         children: [
           ListTile(
-            title: Text(locale.language,style: textTheme.bodyLarge,),
+            title: Text(locale.language,style: textTheme.bodyMedium,),
             trailing: ValueListenableBuilder(
               valueListenable: Hive.box(settingsBox).listenable(),
               builder: (context, box, _) {
@@ -43,7 +43,7 @@ class SettingsScreen extends StatelessWidget {
 
           ),
           ListTile(
-            title: Text(locale.darkMode,style: textTheme.bodyLarge,),
+            title: Text(locale.darkMode,style: textTheme.bodyMedium,),
             trailing: ValueListenableBuilder(
               valueListenable: Hive.box(settingsBox).listenable(),
               builder: (context, box, _) {

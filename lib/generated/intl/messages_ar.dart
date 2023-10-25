@@ -24,8 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appHeader": MessageLookupByLibrary.simpleMessage("تطبيق ناسا"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
+        "getMarsPhoto":
+            MessageLookupByLibrary.simpleMessage("احصل على صورة من المريخ"),
+        "internetError":
+            MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "news": MessageLookupByLibrary.simpleMessage("الاخبار"),
+        "noDataError": MessageLookupByLibrary.simpleMessage("لا يوجد بيانات"),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "theme": MessageLookupByLibrary.simpleMessage("الموضوع")
       };

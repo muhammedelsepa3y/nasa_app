@@ -109,6 +109,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Internet Error`
+  String get internetError {
+    return Intl.message(
+      'Internet Error',
+      name: 'internetError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Data Error`
+  String get noDataError {
+    return Intl.message(
+      'No Data Error',
+      name: 'noDataError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Mars Photo`
+  String get getMarsPhoto {
+    return Intl.message(
+      'Get Mars Photo',
+      name: 'getMarsPhoto',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

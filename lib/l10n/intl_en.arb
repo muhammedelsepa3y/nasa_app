@@ -4,6 +4,9 @@
     "language": "Language",
   "darkMode": "Dark Mode",
   "theme": "Theme",
-  "news": "News"
+  "news": "News",
+  "internetError": "Internet Error",
+  "noDataError": "No Data Error",
+  "getMarsPhoto": "Get Mars Photo"
 
 }
