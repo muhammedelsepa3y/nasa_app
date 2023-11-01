@@ -6,6 +6,7 @@ import 'package:nasa_app/data/API/network_service.dart';
 import 'package:nasa_app/utils/color_schemes.g.dart';
 import 'package:nasa_app/utils/constants.dart';
 import 'package:nasa_app/utils/custom_router.dart';
+import 'package:nasa_app/utils/hive_manager.dart';
 import 'package:sizer/sizer.dart';
 
 
@@ -16,8 +17,8 @@ void main() async {
   NetworkServices networkServices = NetworkServices();
   networkServices.getMarsPhoto(DateTime(2021, 9, 1));
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
-  await Hive.openBox(settingsBox);
+  await HiveManager.initHive();
+
   runApp(MyApp(appRouter: AppRouter()));
 }
 

@@ -1,4 +1,5 @@
 const String settingsBox = "settingsBox";
+const String marsPhotoBox = "marsPhotoBox";
 const String darkModeValue = "darkMode";
 const String languageValue = "languageValue";
 const String nasaNews = "Nasa News";

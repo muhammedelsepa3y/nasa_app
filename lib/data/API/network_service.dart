@@ -47,7 +47,7 @@ class NetworkServices {
 
 
 
-  Future<List<MarsPhoto>> getMarsPhoto(DateTime earthDate) async {
+  Future<List<dynamic>> getMarsPhoto(DateTime earthDate) async {
     try {
       Response response = await _dio.request(
         baseUrl+marsRoverPhotosEndPoint,
@@ -55,10 +55,8 @@ class NetworkServices {
           "earth_date": earthDate.toString(),
         },
       );
-      List<MarsPhoto> photos = (response.data["photos"] as List)
-          .map((photoJson) => MarsPhoto.fromJson(photoJson))
-          .toList();
-      return photos;
+      return response.data["photos"];
+
     } catch(e){
       rethrow;
     }
